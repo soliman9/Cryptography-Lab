@@ -15,10 +15,10 @@ header = image[:54]
 body = image[54:]
 
 # Initialize Cipher with key and mode.
-cipher = Cipher(algorithms.AES(key), modes.ECB())
-# cipher = Cipher(algorithms.AES(key), modes.CBC(iv))
+# cipher = Cipher(algorithms.AES(key), modes.ECB())
+cipher = Cipher(algorithms.AES(key), modes.CBC(iv))
 # cipher = Cipher(algorithms.AES(key), modes.CTR(iv))
-# cipher = Cipher(algorithms.AES(key), modes.OFB(iv))
+# cipher = Cipher(algorithms.AES(key), modes.CFB(iv))
 
 # Only encrypt the file body
 encryptor = cipher.encryptor()

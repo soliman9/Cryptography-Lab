@@ -15,8 +15,8 @@ with open('plain.txt', 'rb') as f:
 
 # cipher = Cipher(algorithms.AES(key), modes.ECB())
 # cipher = Cipher(algorithms.AES(key), modes.CBC(iv))
-# cipher = Cipher(algorithms.AES(key), modes.CTR(iv))
-cipher = Cipher(algorithms.AES(key), modes.OFB(iv))
+cipher = Cipher(algorithms.AES(key), modes.CTR(iv))
+# cipher = Cipher(algorithms.AES(key), modes.CFB(iv))
 encryptor = cipher.encryptor()
 
 
